@@ -1,0 +1,107 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+#MyH1{
+    font-size: 5rem;
+    font-family: "comic-sans", cursive;
+    overflow: hidden;
+    color:hsl(17, 32%, 22%)
+    
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border: 5px solid;
+    border-radius: 44px;
+    background-color: hsl(333, 62%, 91%);
+    
+    
+    
+}  
+#display{
+    font-size: 5rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: rgb(49, 33, 18);
+    margin-bottom: 20px;
+}
+.plaid-container {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+  background-color: #e5b9c4; /* Base Pink */
+}
+
+/* The actual pattern, scaled up and rotated */
+.plaid-pattern {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transform: rotate(45deg);
+  
+  /* Color Palette Variables */
+  --bg-pink: #e5b9c4;
+  --cream: rgba(245, 242, 230, 0.6);
+  --brown-dark: rgba(120, 100, 85, 0.5);
+  --brown-light: rgba(160, 140, 125, 0.3);
+
+  background-color: var(--bg-pink);
+  background-image: 
+    /* Vertical Stripes */
+    linear-gradient(90deg, var(--cream) 0px, var(--cream) 10px, transparent 10px, transparent 40px, var(--brown-light) 40px, var(--brown-light) 45px, transparent 45px, transparent 55px, var(--brown-dark) 55px, var(--brown-dark) 75px, transparent 75px, transparent 100px),
+    
+    /* Horizontal Stripes */
+    linear-gradient(0deg, var(--cream) 0px, var(--cream) 10px, transparent 10px, transparent 40px, var(--brown-light) 40px, var(--brown-light) 45px, transparent 45px, transparent 55px, var(--brown-dark) 55px, var(--brown-dark) 75px, transparent 75px, transparent 100px);
+
+  /* Adjust this size to control how large the plaid squares are */
+  background-size: 100px 100px; 
+}
+.plaid-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 200vw;    
+  height: 200vh;   
+  overflow: hidden;
+  z-index: -1; 
+  
+  /* ADD THIS TO ENSURE NO PARENT ELEMENT CRUSHES ITS SIZE */
+  box-sizing: border-box; 
+}
+#controls button{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width: 125px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.5s ease;
+  }
+#startBtn{
+    background-color: hsl(37, 10%, 31%);
+}
+
+#resetBtn{
+    background-color:hsl(37, 10%, 31%)
+  
+}
+#stopBtn{
+    background-color:hsl(37, 10%, 31%)
+}
+#startBtn:hover ,#resetBtn:hover,#stopBtn:hover{
+    background-color:#4f3f43;
+} 
+.stopwatch-container {
+  background-color:#4f3f43
+}
